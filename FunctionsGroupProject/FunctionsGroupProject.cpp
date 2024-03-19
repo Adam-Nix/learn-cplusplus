@@ -170,10 +170,10 @@ void GetLargest(int array[], int size)
 
 	}
 	{
-		if (array[i] > largestValue)
+		if ( i > largestValue)
 		{
 			largestValue = array[i];
-		}
+		} 
 	}
 }
 
@@ -184,7 +184,7 @@ void GetSmallest(int array[], int size)
 
 	for (int i = 0; i < size; i++)
 	{
-		if (array[i] < smallestValue)
+		if (i < smallestValue)
 		{
 			smallestValue = array[i];
 		}
@@ -209,6 +209,7 @@ void GetSmallest(int array[], int size)
 
 	void ScaleUp(int array[], int size)
 	{
+
 		for (int i = 0; i < size; i++)
 		{
 			array[i] += 1;
@@ -265,6 +266,7 @@ void GetSmallest(int array[], int size)
 
 	void sort(int array[], int size)
 	{
+		
 		for (int i = 0; i < size; i++)
 		{
 			for (int j = i + 1; j < size; j++)
