@@ -1,5 +1,4 @@
 #include <iostream>
-#include <vector>
 using namespace std;
 
 void MenuChoices(int array[], int size);
@@ -25,7 +24,7 @@ void MenuChoices(int array[], int size)
 	cout << "select 3 to Get the Average of the array          |" << endl;
 	cout << "select 4 to Get the Largest number in the array   |" << endl;
 	cout << "select 5 to Get the Smallest number in the array  |" << endl;
-	cout << "select 6 to Get the number of occurences          |" << endl;
+	cout << "select 6 to Get the number of occurrences         |" << endl;
 	cout << "select 7 to Scale up by one                       |" << endl;
 	cout << "select 8 to reverse the array                     |" << endl;
 	cout << "select 9 to Zero Base                             |" << endl;
@@ -50,58 +49,63 @@ void UserChoiceInput(int array[], int size)
 	cout << "Enter your choice: ";
 	cin >> Menu;
 
-	switch (Menu)
+	while (Menu != 12)
 	{
-	case 1:
-		Display(array, size);
-		break;
+		switch (Menu)
+		{
+		case 1:
+			Display(array, size);
+			break;
 
-	case 2:
-		GetTotal(array, size);
-		break;
+		case 2:
+			GetTotal(array, size);
+			break;
 
-	case 3:
-		GetAverage(array, size);
-		break;
+		case 3:
+			GetAverage(array, size);
+			break;
 
-	case 4:
-		GetLargest(array, size);
-		break;
+		case 4:
+			GetLargest(array, size);
+			break;
 
-	case 5:
-		GetSmallest(array, size);
-		break;
+		case 5:
+			GetSmallest(array, size);
+			break;
 
-	case 6:
-		GetNumOccurences(array, size);
-		break;
+		case 6:
+			GetNumOccurences(array, size);
+			break;
 
-	case 7:
-		ScaleUp(array, size);
-		break;
+		case 7:
+			ScaleUp(array, size);
+			break;
 
-	case 8:
-		Reverce(array, size);
-		break;
+		case 8:
+			Reverce(array, size);
+			break;
 
-	case 9:
-		ZeroBase(array, size);
-		break;
+		case 9:
+			ZeroBase(array, size);
+			break;
 
-	case 10:
-		RemoveNumber(array, size);
-		break;
+		case 10:
+			RemoveNumber(array, size);
+			break;
 
-	case 11:
-		Sort(array, size);
-		break;
+		case 11:
+			Sort(array, size);
+			break;
 
-	case 12:
-		exit(0);
+		default:
+			cout << "Invalid choice" << endl;
+			break;
+		}
 
-	default:
-		cout << "Invalid choice" << endl;
-		break;
+		cout << endl;
+		MenuChoices(array, size);
+		cout << "Enter your choice: ";
+		cin >> Menu;
 	}
 }
 
@@ -225,7 +229,6 @@ void RemoveNumber(int array[], int& size)
 	size--;
 
 	cout << "The element at position " << num << " has been removed from the array" << endl;
-
 }
 
 void Sort(int array[], int size)
