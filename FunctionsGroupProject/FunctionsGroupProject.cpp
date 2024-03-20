@@ -1,4 +1,5 @@
 #include <iostream>
+#include <string>
 using namespace std;
 
 void MenuChoices(int array[], int size);
@@ -16,41 +17,65 @@ void ZeroBase(int array[], int size);
 void RemoveNumber(int array[], int& size);
 void Sort(int array[], int size);
 
+
 void MenuChoices(int array[], int size)
 {
-	cout << "--------------------------------------------------" << endl;
-	cout << "select 1 to Display the Numbers in the array      |" << endl;
-	cout << "select 2 to get total of the array                |" << endl;
-	cout << "select 3 to Get the Average of the array          |" << endl;
-	cout << "select 4 to Get the Largest number in the array   |" << endl;
-	cout << "select 5 to Get the Smallest number in the array  |" << endl;
-	cout << "select 6 to Get the number of occurrences         |" << endl;
-	cout << "select 7 to Scale up by one                       |" << endl;
-	cout << "select 8 to reverse the array                     |" << endl;
-	cout << "select 9 to Zero Base                             |" << endl;
-	cout << "select 10 to remove a number form the array       |" << endl;
-	cout << "select 11 to sort the array form ascending order  |" << endl;
-	cout << "select 12 to Exit                                 |" << endl;
-	cout << "--------------------------------------------------" << endl;
+	cout << "-----------------------------------------------------" << endl;
+	cout << "| select 1 to Display the Numbers in the array      |" << endl;
+	cout << "| select 2 to get total of the array                |" << endl;
+	cout << "| select 3 to Get the Average of the array          |" << endl;
+	cout << "| select 4 to Get the Largest number in the array   |" << endl;
+	cout << "| select 5 to Get the Smallest number in the array  |" << endl;
+	cout << "| select 6 to Get the number of occurrences         |" << endl;
+	cout << "| select 7 to Scale up by one                       |" << endl;
+	cout << "| select 8 to reverse the array                     |" << endl;
+	cout << "| select 9 to Zero Base                             |" << endl;
+	cout << "| select 10 to remove a number form the array       |" << endl;
+	cout << "| select 11 to sort the array form ascending order  |" << endl;
+	cout << "| select 12 to Exit                                 |" << endl;
+	cout << "-----------------------------------------------------" << endl;
 }
 
 void populateArray(int array[], int size)
 {
 	cout << "Enter 5 numbers to populate the array: " << endl;
+
+	if (size < 1)
+	{
+		cout << "Invalid size" << endl;
+		return;
+	}
 	for (int i = 0; i < size; i++)
 	{
-		cin >> array[i];
+		string input;
+		cin >> input;
+		try
+		{
+			array[i] = stoi(input);
+		}
+		catch (const invalid_argument& e)
+		{
+			cout << "Invalid input. Please enter a number." << endl;
+			i--;
+		}
 	}
 }
 
 void UserChoiceInput(int array[], int size)
 {
 	int Menu;
-	cout << "Enter your choice: ";
 	cin >> Menu;
+
+	while (Menu < 1 || Menu > 12)
+	{
+		cout << "Invalid choice. Please enter a number between 1 and 12: ";
+		cin.clear();
+		cin >> Menu;
+	}
 
 	while (Menu != 12)
 	{
+
 		switch (Menu)
 		{
 		case 1:
@@ -107,6 +132,7 @@ void UserChoiceInput(int array[], int size)
 		cout << "Enter your choice: ";
 		cin >> Menu;
 	}
+	cout << "Exiting the program" << endl;
 }
 
 void Display(int array[], int size)
