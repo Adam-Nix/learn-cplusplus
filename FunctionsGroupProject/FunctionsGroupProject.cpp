@@ -1,5 +1,6 @@
 #include <iostream>
 #include <string>
+#include <fstream>
 using namespace std;
 
 void MenuChoices(int array[], int size);
@@ -20,6 +21,7 @@ void Sort(int array[], int size);
 
 void MenuChoices(int array[], int size)
 {
+
 	cout << "-----------------------------------------------------" << endl;
 	cout << "| select 1 to Display the Numbers in the array      |" << endl;
 	cout << "| select 2 to get total of the array                |" << endl;
@@ -34,21 +36,25 @@ void MenuChoices(int array[], int size)
 	cout << "| select 11 to sort the array form ascending order  |" << endl;
 	cout << "| select 12 to Exit                                 |" << endl;
 	cout << "-----------------------------------------------------" << endl;
+
+	cout << "Enter your choice: ";
 }
+
+using namespace std;
 
 void populateArray(int array[], int size)
 {
-	cout << "Enter 5 numbers to populate the array: " << endl;
-
-	if (size < 1)
+	ifstream inputFile("Values.txt");
+	if (!inputFile)
 	{
-		cout << "Invalid size" << endl;
+		cout << "Failed to open file." << endl;
 		return;
 	}
+
 	for (int i = 0; i < size; i++)
 	{
 		string input;
-		cin >> input;
+		inputFile >> input;
 		try
 		{
 			array[i] = stoi(input);
@@ -59,19 +65,14 @@ void populateArray(int array[], int size)
 			i--;
 		}
 	}
+
+	inputFile.close();
 }
 
 void UserChoiceInput(int array[], int size)
 {
 	int Menu;
 	cin >> Menu;
-
-	while (Menu < 1 || Menu > 12)
-	{
-		cout << "Invalid choice. Please enter a number between 1 and 12: ";
-		cin.clear();
-		cin >> Menu;
-	}
 
 	while (Menu != 12)
 	{
@@ -127,8 +128,17 @@ void UserChoiceInput(int array[], int size)
 			break;
 		}
 
+
+		while (Menu < 1 || Menu > 12)
+		{
+			cout << "Invalid choice. Please enter a number between 1 and 12: ";
+			cin.clear();
+			cin >> Menu;
+		}
+
 		cout << endl;
 		MenuChoices(array, size);
+
 		cout << "Enter your choice: ";
 		cin >> Menu;
 	}
@@ -195,6 +205,14 @@ void GetNumOccurences(int array[], int size)
 	int num;
 	cout << "Enter the number you want to find: ";
 	cin >> num;
+	while (cin.fail())
+	{
+		cout << "Invalid input. Please enter a number." << endl;
+		cin.clear();
+		cin.ignore(numeric_limits<streamsize>::max(), '\n');
+		cout << "Enter the number you want to find: ";
+		cin >> num;
+	}
 	int count = 0;
 	for (int i = 0; i < size; i++)
 	{
@@ -241,6 +259,15 @@ void RemoveNumber(int array[], int& size)
 	int num;
 	cout << "Enter the element number you want to remove: ";
 	cin >> num;
+
+	while (cin.fail())
+	{
+		cout << "Invalid input. Please enter a number." << endl;
+		cin.clear();
+		cin.ignore(numeric_limits<streamsize>::max(), '\n');
+		cout << "Enter the element number you want to remove: ";
+		cin >> num;
+	}
 
 	if (num < 1 || num > size)
 	{
