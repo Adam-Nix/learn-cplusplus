@@ -2,7 +2,11 @@
 #include <string>
 #include <fstream>
 using namespace std;
-
+const int MENU_EXIT_CODE = 12;
+const int MENU_PRINT_CODE = 1;
+const int MENU_TOTAL_CODE = 2;
+const int MENU_AVERAGE_CODE = 3;
+const int MENU_LARGEST_CODE = 4;
 void MenuChoices(int array[], int size);
 void populateArray(int array[], int size);
 void UserChoiceInput(int array[], int size);
@@ -21,9 +25,8 @@ void Sort(int array[], int size);
 
 void MenuChoices(int array[], int size)
 {
-
 	cout << "-----------------------------------------------------" << endl;
-	cout << "| select 1 to Display the Numbers in the array      |" << endl;
+	cout << "| select "<< MENU_PRINT_CODE << " to Display the Numbers in the array | " << endl;
 	cout << "| select 2 to get total of the array                |" << endl;
 	cout << "| select 3 to Get the Average of the array          |" << endl;
 	cout << "| select 4 to Get the Largest number in the array   |" << endl;
@@ -71,15 +74,15 @@ void populateArray(int array[], int size)
 
 void UserChoiceInput(int array[], int size)
 {
-	int Menu;
-	cin >> Menu;
+	int selectionCode;
+	cin >> selectionCode;
 
-	while (Menu != 12)
+	while (selectionCode != MENU_EXIT_CODE)
 	{
 
-		switch (Menu)
+		switch (selectionCode)
 		{
-		case 1:
+		case MENU_PRINT_CODE:
 			Display(array, size);
 			break;
 
@@ -128,19 +131,19 @@ void UserChoiceInput(int array[], int size)
 			break;
 		}
 
-
-		while (Menu < 1 || Menu > 12)
+		// TODO: REMOE THIS BLOCK OF CODE
+		while (selectionCode < 1 || selectionCode > 12)
 		{
 			cout << "Invalid choice. Please enter a number between 1 and 12: ";
 			cin.clear();
-			cin >> Menu;
+			cin >> selectionCode;
 		}
 
 		cout << endl;
 		MenuChoices(array, size);
 
 		cout << "Enter your choice: ";
-		cin >> Menu;
+		cin >> selectionCode;
 	}
 	cout << "Exiting the program" << endl;
 }

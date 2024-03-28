@@ -1,0 +1,50 @@
+realadamnix {
+  "id": "a855d0c2-8a1f-49e9-b8d7-e00c381b77a5",
+  "name": "My Visual Studio extensions",
+  "description": "A collection of my Visual Studio extensions",
+  "version": "1.0",
+  "extensions": [
+    {
+      "name": "Extension Manager 2022",
+      "vsixId": "3d183c28-64c6-4efb-a201-50310d65e675",
+      "moreInfoUrl": "https://marketplace.visualstudio.com/items?itemName=Loop8ack.ExtensionManager2022",
+      "downloadUrl": "https://loop8ack.gallery.vsassets.io:443/_apis/public/gallery/publisher/Loop8ack/extension/ExtensionManager2022/1.2.184/assetbyname/Microsoft.VisualStudio.Ide.Payload?redirect=true&update=true"
+    },
+    {
+      "name": "File Path On Footer",
+      "vsixId": "FilePathOnFooter..c9550e78-0647-4b3f-b1d7-22a719752870",
+      "moreInfoUrl": "https://marketplace.visualstudio.com/items?itemName=ShemeerNS.FilePathOnFooter",
+      "downloadUrl": "https://shemeerns.gallery.vsassets.io:443/_apis/public/gallery/publisher/ShemeerNS/extension/FilePathOnFooter/2.1.1.2/assetbyname/Microsoft.VisualStudio.Ide.Payload?redirect=true&update=true"
+    },
+    {
+      "name": "License Header Manager",
+      "vsixId": "4c570677-8476-4d33-bd0c-da36c89287c8",
+      "moreInfoUrl": "https://marketplace.visualstudio.com/items?itemName=StefanWenig.LicenseHeaderManager",
+      "downloadUrl": "https://stefanwenig.gallery.vsassets.io:443/_apis/public/gallery/publisher/StefanWenig/extension/LicenseHeaderManager/5.0.1/assetbyname/Microsoft.VisualStudio.Ide.Payload?redirect=true&update=true"
+    },
+    {
+      "name": "Markdown Editor v2",
+      "vsixId": "MarkdownEditor2022.2347dc70-1875-4775-bf48-f2b9fdfee8d4",
+      "moreInfoUrl": "https://marketplace.visualstudio.com/items?itemName=MadsKristensen.MarkdownEditor2",
+      "downloadUrl": "https://madskristensen.gallery.vsassets.io:443/_apis/public/gallery/publisher/MadsKristensen/extension/MarkdownEditor2/2.0.153/assetbyname/Microsoft.VisualStudio.Ide.Payload?redirect=true&update=true"
+    },
+    {
+      "name": "Rainbow Braces",
+      "vsixId": "RainbowBraces.1dff1bc5-a8e4-477b-9054-2b9ec6bb88d1",
+      "moreInfoUrl": "https://marketplace.visualstudio.com/items?itemName=MadsKristensen.RainbowBraces",
+      "downloadUrl": "https://madskristensen.gallery.vsassets.io:443/_apis/public/gallery/publisher/MadsKristensen/extension/RainbowBraces/1.0.159/assetbyname/Microsoft.VisualStudio.Ide.Payload?redirect=true&update=true"
+    },
+    {
+      "name": "SonarLint for Visual Studio 2022",
+      "vsixId": "SonarLint.0DE19254-1DCA-4479-8EAF-58E5D677FF4D",
+      "moreInfoUrl": "https://marketplace.visualstudio.com/items?itemName=SonarSource.SonarLintforVisualStudio2022",
+      "downloadUrl": "https://sonarsource.gallery.vsassets.io:443/_apis/public/gallery/publisher/SonarSource/extension/SonarLintforVisualStudio2022/7.7.0.86423/assetbyname/Microsoft.VisualStudio.Ide.Payload?redirect=true&update=true"
+    },
+    {
+      "name": "Visual Studio Spell Checker (VS2022 and Later)",
+      "vsixId": "E1019027-EE37-4B1A-AD4C-25CAA92CA2D5",
+      "moreInfoUrl": "https://marketplace.visualstudio.com/items?itemName=EWoodruff.VisualStudioSpellCheckerVS2022andLater",
+      "downloadUrl": "https://ewoodruff.gallery.vsassets.io:443/_apis/public/gallery/publisher/EWoodruff/extension/VisualStudioSpellCheckerVS2022andLater/2023.12.29.0/assetbyname/Microsoft.VisualStudio.Ide.Payload?redirect=true&update=true"
+    }
+  ]
+}

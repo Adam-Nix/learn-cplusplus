@@ -33,6 +33,11 @@ Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "PasswordExample", "Password
 EndProject
 Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "FunctionsGroupProject", "FunctionsGroupProject\FunctionsGroupProject.vcxproj", "{0CB5F6D2-F1BD-4A67-B44F-9B6C22C25EF1}"
 EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Solution Items", "Solution Items", "{D704ED93-690E-4552-86E3-585899E00DC8}"
+	ProjectSection(SolutionItems) = preProject
+		learn-cplusplus.vsext = learn-cplusplus.vsext
+	EndProjectSection
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|x64 = Debug|x64

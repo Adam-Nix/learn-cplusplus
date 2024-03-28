@@ -20,7 +20,7 @@
     </ClCompile>
   </ItemGroup>
   <ItemGroup>
-    <None Include="..\..\..\..\Downloads\SP ProjSpec (1).pdf">
+    <None Include="readme.md">
       <Filter>Source Files</Filter>
     </None>
   </ItemGroup>
