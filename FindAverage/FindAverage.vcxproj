@@ -21,8 +21,8 @@
   <PropertyGroup Label="Globals">
     <VCProjectVersion>17.0</VCProjectVersion>
     <Keyword>Win32Proj</Keyword>
-    <ProjectGuid>{49878031-757c-43bf-baf7-0caafea4d966}</ProjectGuid>
-    <RootNamespace>FindAvarage</RootNamespace>
+    <ProjectGuid>{f574dcb6-c861-40ab-8bfa-f8486372ad88}</ProjectGuid>
+    <RootNamespace>FindAverage</RootNamespace>
     <WindowsTargetPlatformVersion>10.0</WindowsTargetPlatformVersion>
   </PropertyGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.Default.props" />
@@ -127,7 +127,7 @@
     </Link>
   </ItemDefinitionGroup>
   <ItemGroup>
-    <ClCompile Include="FindAvarage.cpp" />
+    <ClCompile Include="FindAverage.cpp" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">

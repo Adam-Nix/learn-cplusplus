@@ -1,11 +1,11 @@
 // FindAvarage.cpp : This file contains the 'main' function. Program execution begins and ends there.
-    double average;
+double average;
 //
 #include <iomanip>
 #include <iostream>
 using namespace std;
 
-Double listAverage(int list[], int size);
+double listAverage(int list[], int size);
 
 int main()
 {
@@ -23,12 +23,12 @@ int main()
 	{
 		cout << numbers[i] << " ";
 	}
-	
+
 	average = listAverage(numbers, 5);
 	cout << "The average of the numbers is: " << fixed << setprecision(2) << average << endl;
 }
 
-Double listAverage(int list[], int size)
+double listAverage(int list[], int size)
 {
 	double average;
 	int total = 0;
@@ -36,7 +36,7 @@ Double listAverage(int list[], int size)
 	{
 		total += list[i];
 	}
-	return total /=5;
+	return total /= 5;
 }
 
 
